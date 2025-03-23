@@ -1,0 +1,69 @@
+﻿## Windows
+Thumbs.db
+ehthumbs.db
+
+## ASP.NET Core
+# User-specific files
+.idea/
+.vs/
+.vscode/
+
+# Build results
+bin/
+obj/
+
+# ASP.NET Core config files
+appsettings.json
+appsettings.Development.json
+appsettings.Staging.json
+appsettings.Production.json
+
+# ASP.NET Core Logs
+logs/
+
+# Node.js
+node_modules/
+
+# User secrets
+secrets.json
+
+# NPM logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Windows Installer files
+*.cab
+*.msi
+*.msm
+*.msp
+
+# JetBrains Rider
+.idea/
+
+# User-specific files (e.g., VSCode settings)
+.vscode/
+
+# Windows Installer files
+*.cab
+*.msi
+*.msm
+*.msp
+
+# Other user-specific files
+*.swp
+
+# ASP.NET Core specific
+project.lock.json
+project.fragment.lock.json
+
+# Docker
+docker-compose.override.yml
+.docker/
+
+# Azure Pipeline local files
+.vsts/
+
+# .NET Core specific
+bin/
+obj/
