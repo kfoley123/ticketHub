@@ -5,7 +5,9 @@ namespace TicketHub
 {
     public class TicketPurchase
     {
-        public int Id { get; set; }
+        [Required]
+        public int ConcertId { get; set; }
+
         [Required, EmailAddress]
         public string? Email { get; set; }
         [Required, MaxLength(255)]
@@ -29,13 +31,6 @@ namespace TicketHub
         [Required, MaxLength(6)]
         public string? PostalCode { get; set; }
         [Required]
-        public string? Country { get; set; }
-
-        //foreign key linking to Concert
-        [ForeignKey("Concert")]
-        public int ConcertId { get; set; }
-
-        //navigation property
-        public Concert Concert { get; set; }
+        public string? Country { get; set; } 
     }
 }
