@@ -1,6 +1,7 @@
 ﻿using Azure.Storage.Queues;
 using System.Text.Json;
 using Microsoft.AspNetCore.Mvc;
+using System.Text;
 
 namespace TicketHub.Controllers
 {
@@ -44,7 +45,9 @@ namespace TicketHub.Controllers
 
             //serialize the ticket purchase object to a JSON string
             string message = JsonSerializer.Serialize(ticketPurchase);
-            await queueClient.SendMessageAsync(message);
+
+            var plainTextBytes = Encoding.UTF8.GetBytes(message);
+            await queueClient.SendMessageAsync(Convert.ToBase64String(plainTextBytes));
 
             return Ok();
         }
